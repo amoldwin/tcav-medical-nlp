@@ -1,0 +1,8 @@
+,0,1
+0,source_dir,./source_dir
+1,working_dir,./working_dir
+2,checkpoints_dir,./checkpoints_dir
+3,cav_dir,./cav_dir
+4,activations_dir,./activations_dir
+5,data_dir,./data_dir
+6,concepts_dir,./concepts_dir

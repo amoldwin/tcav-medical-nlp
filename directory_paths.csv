@@ -1,0 +1,8 @@
+paths
+"('source_dir', '/data/moldwinar/tcav2/')"
+"('working_dir', '/data/moldwinar/torch_tcav/tcav_scripts/')"
+"('checkpoints_dir', '/data/moldwinar/torch_tcav/model_train_scripts/checkpoints/')"
+"('data_dir', '/data/moldwinar/tcav2/data/')"
+"('concepts_dir', '/data/moldwinar/tcav2/concept_listfiles/')"
+"('mimic_dir', '/data/LHC_mimic/mimic3_1.4/raw_data/')"
+"('activations_dir:', 'LSCRATCH')"
