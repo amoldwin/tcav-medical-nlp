@@ -74,7 +74,7 @@ def compute_metrics(eval_pred,  output_dir = output_dir):
     best_mcc=0
     best_ckpt=''
     if EXP_NAME+'.csv' in os.listdir(checkpoints_dir):
-        old_scores = pd.read_csv('os.path.join(checkpoints_dir, EXP_NAME+'.csv'))
+        old_scores = pd.read_csv(os.path.join(checkpoints_dir, EXP_NAME+'.csv'))
         best_mcc=old_scores['val_MCC'].max()
         epoch = old_scores['epoch'].iloc[-1]+1
         best_ckpt = old_scores.iloc[old_scores['val_MCC'].idxmax()]['fn']

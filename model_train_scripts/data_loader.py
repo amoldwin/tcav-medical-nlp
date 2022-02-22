@@ -180,7 +180,7 @@ class ClueDataset(datasets.GeneratorBasedBuilder):
 
     def _get_label_parse_fn(self):
 
-        elif self.config.name == ('nicu_los'):
+        if self.config.name == ('nicu_los'):
             def parse_fn(data):
                 return {f'nicu_los': int(float(data['label']))}
         elif self.config.name == 'CCS':

@@ -137,7 +137,7 @@ def compute_metrics(eval_pred,  output_dir = output_dir):
     df_dict['confusion'] = str(confusion_matrix(labels,predictions))
     df_dict['epoch']=epoch
     df_dict['fn']=fn
-   if EXP_NAME+'.csv' not in os.listdir(checkpoints_dir):
+    if EXP_NAME+'.csv' not in os.listdir(checkpoints_dir):
         pd.DataFrame(df_dict).to_csv(os.path.join(checkpoints_dir,EXP_NAME+'.csv'), mode='a',header=True)
     else:
         pd.DataFrame(df_dict).to_csv(os.path.join(checkpoints_dir,EXP_NAME+'.csv'), mode='a',header=False)

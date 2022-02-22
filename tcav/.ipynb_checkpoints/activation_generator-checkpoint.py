@@ -31,6 +31,7 @@ import time
 
 from encode_functions import *
 
+dirs_dct = dict(list(pd.read_csv('../directory_paths.csv')['paths'].apply(eval)))
 
 
 class ActivationGeneratorInterface(six.with_metaclass(ABCMeta, object)):
@@ -161,7 +162,7 @@ class ImageActivationGenerator(ActivationGeneratorBase):
                  max_examples=10,
                  normalize_image=True,
                  document_encoder=None,
-                 concept_dir='../../tcav2/concept_listfiles',
+                 concept_dir=dirs_dct['concepts_dir'],
                  from_row_id=False,
                  all_acts_dir=None):
         """Initialize ImageActivationGenerator class."
