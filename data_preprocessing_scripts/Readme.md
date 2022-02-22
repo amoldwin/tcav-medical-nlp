@@ -1,6 +1,6 @@
 In this directory, you can find all of the scripts used to generate our task datasets for:
 
-(1) Neonatal Intensive Care Unit Length of Stay and (2)Metabolic Syndrome detection.
+(1)** Neonatal Intensive Care Unit Length of Stay ** and (2)**Metabolic Syndrome detection**.
 
 Both tasks involve relying on the text of clinical notes to predict a binary outcome.
 
