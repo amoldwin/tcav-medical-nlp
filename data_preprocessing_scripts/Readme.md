@@ -9,6 +9,10 @@ In addition to generating the task datasets, these scripts will create csv files
 A number of scripts will need to be run to generate the data. 
 For the NICU task:
 
+
+(1) Run the first 2 cells of create_training_data_metabolic_syndrome.ipynb (this is where we generated the merged admissions, so we need this for both tasks)
+
+
 (1)nicu_pull_birth_weight_gest_age.py
 
 (2)create_los_neonates_none_removed.ipynb
