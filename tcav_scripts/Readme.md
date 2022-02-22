@@ -1,5 +1,9 @@
 The script for running TCAV experiments.
 
+To simplify the process of running all the experiments, I made "generate_bash_scripts.ipynb" to automatically generate the arguments for "tcav_experiment.py". Modify as needed.
+
+
+
 Depending on several parameters, including where you would like to store your files,
  you can specify the details of your experiment using the following arguments:
  
@@ -7,6 +11,9 @@ Depending on several parameters, including where you would like to store your fi
 "--bottleneck_name": The name of the layer you would like to interpret. Usually this is the name of the pytorch module in 
 the model's "module list", but because we are working with some non-standard models, we assign our own names to some model's layers
 in tcav/model.py 
+
+NOTE: For all of our experiments, we use the penultimate layer for TCAV. If you want to run TCAV on other layers, you will need to edit "tcav/model.py" to get activations from the desired layer.
+
 
 "--ckpt_path": the path of the model that we woulk like to interpet
 
