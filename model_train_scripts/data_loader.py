@@ -108,9 +108,9 @@ class ClueDataset(datasets.GeneratorBasedBuilder):
                                              'test': 'los_metabolic_test_admissions.csv'}
         if self.config.name == 'CCS_txt_str':
             features['text'] = datasets.Value("string")
-            features['CCS__txt_str'] = datasets.Value("int8")
+            features['CCS_txt_str'] = datasets.Value("int8")
             features['structured_features'] = datasets.Value("string")
-            self.filepaths['CCS__txt_str']={'train': 'metabolic_train_plus_structured.csv',
+            self.filepaths['CCS_txt_str']={'train': 'metabolic_train_plus_structured.csv',
                                              'val': 'metabolic_val_plus_structured.csv',
                                              'test': 'metabolic_test_plus_structured.csv'}
         if self.config.name == 'NER':
