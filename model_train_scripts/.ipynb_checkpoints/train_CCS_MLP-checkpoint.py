@@ -13,7 +13,7 @@ import wandb
 
 dirs_dct = dict(list(pd.read_csv('../directory_paths.csv')['paths'].apply(eval)))
 
-=dirs_dct['checkpoints_dir']
+checkpoints_dir=dirs_dct['checkpoints_dir']
 
 EXP_NAME = 'CCS_MLP_TEXT_'
 
