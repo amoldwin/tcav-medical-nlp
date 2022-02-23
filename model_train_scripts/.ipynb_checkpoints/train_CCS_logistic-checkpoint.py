@@ -16,7 +16,7 @@ checkpoints_dir=dirs_dct['checkpoints_dir']
 
 bert_tokenizer = BertTokenizer.from_pretrained("bionlp/bluebert_pubmed_mimic_uncased_L-12_H-768_A-12", model_max_length=512)
 
-EXP_NAME = 'FINALLogisticCCS_halfsplit'
+EXP_NAME = 'FINALLogisticCCS'
 
 # wandb.init(settings=wandb.Settings(start_method="fork"))
 

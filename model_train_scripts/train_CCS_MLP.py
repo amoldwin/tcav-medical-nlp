@@ -13,7 +13,7 @@ import wandb
 
 dirs_dct = dict(list(pd.read_csv('../directory_paths.csv')['paths'].apply(eval)))
 
-checkpoints_dir=dirs_dct['checkpoints_dir']
+=dirs_dct['checkpoints_dir']
 
 EXP_NAME = 'CCS_MLP_TEXT_'
 
@@ -69,8 +69,8 @@ def compute_metrics(eval_pred,  output_dir = output_dir):
     epoch=1
     best_mcc=0
     best_ckpt=''
-    if EXP_NAME+'.csv' in os.listdir('checkpoints'):
-        old_scores = pd.read_csv('checkpoints/'+EXP_NAME+'.csv')
+    if EXP_NAME+'.csv' in os.listdir(checkpoints_dir):
+        old_scores = pd.read_csv(os.path.join(checkpoints_dir,EXP_NAME+'.csv'))
         best_mcc=old_scores['val_MCC'].max()
         epoch = old_scores['epoch'].iloc[-1]+1
         best_ckpt = old_scores.iloc[old_scores['val_MCC'].idxmax()]['fn']
@@ -127,10 +127,10 @@ def compute_metrics(eval_pred,  output_dir = output_dir):
     df_dict['confusion'] = str(confusion_matrix(labels,predictions))
     df_dict['epoch']=epoch
     df_dict['fn']=fn
-    if EXP_NAME+'.csv' not in os.listdir('checkpoints'):
-        pd.DataFrame(df_dict).to_csv('checkpoints/'+EXP_NAME+'.csv', mode='a',header=True)
+    if EXP_NAME+'.csv' not in os.listdir(checkpoints_dir):
+        pd.DataFrame(df_dict).to_csv(os.path.join(checkpoints_dir,EXP_NAME+'.csv'), mode='a',header=True)
     else:
-        pd.DataFrame(df_dict).to_csv('checkpoints/'+EXP_NAME+'.csv', mode='a',header=False)
+        pd.DataFrame(df_dict).to_csv(os.path.join(checkpoints_dir,EXP_NAME+'.csv'), mode='a',header=False)
     return metrics_dict
 
 

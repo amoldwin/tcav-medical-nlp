@@ -25,7 +25,7 @@ EXP_NAME = 'residual_CCS_'
 wandb.init(settings=wandb.Settings(start_method="fork"))
 
 for i in range(100):
-    if EXP_NAME +'_'+str(i)+'.csv' not in os.listdir('checkpoints'):
+    if EXP_NAME +'_'+str(i)+'.csv' not in os.listdir(checkpoints_dir):
         EXP_NAME = EXP_NAME +'_'+str(i)
         break
 print('experiment name is '+ EXP_NAME)
