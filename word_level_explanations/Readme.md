@@ -1,5 +1,9 @@
 Word Level Explanations:
 
+
+This part of the code is based on the integrated gradient/smooth grad implementation found here: https://github.com/koren-v/Interpret
+
+
 Instructions are still being written. This part of the code hasn't been refactored yet.
 
 In the paper, we provide the following word-level explanations for the BERT NICU LOS model:
