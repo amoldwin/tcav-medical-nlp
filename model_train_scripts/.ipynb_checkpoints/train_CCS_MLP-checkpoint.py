@@ -51,14 +51,14 @@ val_test_ds = concatenate_datasets([val_dataset, test_dataset])
 
 print('done loading data',flush=True)
 reverse_labels_dict = {'0':'0','1':'1'}
-output_dir='./checkpoints/'+EXP_NAME
+output_dir=os.path.join(checkpoints_dir, EXP_NAME)
 epoch=0
 best_mcc=0
 best_ckpt=''
 
 
 reverse_labels_dict = {'0':'0','1':'1'}
-output_dir='./checkpoints/'+EXP_NAME
+output_dir=os.path.join(checkpoints_dir, EXP_NAME)
 
 batch_size=8
 
