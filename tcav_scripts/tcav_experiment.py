@@ -31,6 +31,7 @@ parser.add_argument("--data_encode_function_name", type=str,required=True)
 parser.add_argument("--num_trials", type=int,required=True)
 
 args = parser.parse_args()
+print('args',args)
 args.concepts_list=eval(args.concepts_list)
 if args.activations_dir=='LSCRATCH':
     args.activations_dir='/lscratch/'+os.environ['SLURM_JOB_ID']+'/'
@@ -91,11 +92,11 @@ all_required_exs = pd.DataFrame()
 for fn in concepts+all_negative_concepts:
    all_required_exs = pd.concat([all_required_exs,   pd.read_csv(os.path.join(concepts_dir,fn))], ignore_index=True).drop_duplicates(subset=['ROW_ID'])
 
-all_required_exs.to_csv(os.path.join(args.concepts_dir,'all_required_exs_NICU.csv'))
+all_required_exs.to_csv(os.path.join(args.concepts_dir,'all_required_exs.csv'))
 
 if not os.path.isfile(os.path.join(args.all_activations_dir,'all_activations.pk')):
 
-    all_activations = act_generator.get_activations_for_concept('all_required_exs_NICU.csv', bottleneck=bottlenecks[0],shuffled=False)
+    all_activations = act_generator.get_activations_for_concept('all_required_exs.csv', bottleneck=bottlenecks[0],shuffled=False)
 
     all_activations_df = pd.DataFrame((zip(all_required_exs['ROW_ID'], all_activations)),columns=['ROW_ID','activations'])
 
@@ -115,7 +116,7 @@ for i, concept in enumerate(concepts):
 
     print('concept was '+concept+', negative concepts were: ', negative_concepts,flush=True)
     results_filename = '_'.join([args.experiment_name,concept,'.pk'])
-    if os.path.isfile(results_filename):
+    if os.path.isfile(os.path.join(args.results_dir,results_filename)):
         print('skipping concept because results already present')
         continue
     mytcav = tcav.TCAV(target,
