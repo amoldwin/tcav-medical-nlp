@@ -125,7 +125,7 @@ def css_bar(start: float, end: float, color: str, row_idx:int, col:str,errs) -> 
                 css+= 'background-size: 80% 10%, 80% 80% ; background-repeat: no-repeat, no-repeat; background-position: 0 20%, 0 0 ;'
                 
             return css
-def tcav_plot(model_names, targets,order, concept_names,metric='acc'):
+def tcav_plot(model_names, targets,order, concept_names,metric='acc', ordered_labels=None):
 #     def sort_df(df,col, order):
 #             sorter= order
 #             if col =='index':
@@ -142,7 +142,7 @@ def tcav_plot(model_names, targets,order, concept_names,metric='acc'):
 
     rows = concept_names
     cols=model_names
-    sub_cols = ['TCAV','Stdev',metric]
+    sub_cols = ['TCAV','Stdev',"CAV\nAccuracy"]
     mux = pd.MultiIndex.from_product([cols, sub_cols])
     df_pd = pd.DataFrame(data, columns=mux, index=rows).round(2)
     df_pd=df_pd[model_names]
@@ -154,28 +154,38 @@ def tcav_plot(model_names, targets,order, concept_names,metric='acc'):
     df_pd=df_pd.reset_index()
     df_pd = sort_df(df_pd, 'concept',order)
 
-
     df_pd.index=df_pd['concept']
     df_pd=df_pd[[col for col in df_pd.columns if col[0] not in ['rank','concept']]]
-    df_pd['Code'] = ['A'+str(i) for i in range(len(df_pd))]
-    df_pd=df_pd[['Code']+model_names]
+    df_pd=df_pd[model_names]
     # df.style.background_gradient(cmap ='Reds')\
     #         .set_properties(**{'font-size': '12px'})
     no_error_df_pd = df_pd[[col for col in df_pd.columns if col[1]!='Stdev']]
     no_error_df_pd.index.name=None
     
     no_error_df_pd = sort_df(no_error_df_pd, 'index',order)
+    if ordered_labels:
+        no_error_df_pd.index=ordered_labels
+        no_error_df_pd.index.name = 'Concept'
+        
+        
+    no_error_df_pd[('','Concept')] = no_error_df_pd.index
+    no_error_df_pd = no_error_df_pd[[('','Concept')]+[x for x in no_error_df_pd.columns if not 'Concept' in x ]]
+    no_error_df_pd = no_error_df_pd.reset_index(drop=True)
+    
     def add_errorbars(x):
         return np.where(x == np.nanmax(x.to_numpy()), "{height: 1px;background: black;}", None)
     styled=no_error_df_pd.style.format({'vm_unity': '{:.2%}'})\
     .bar(subset = [col for col in df_pd.columns if col[1]=='TCAV'], align='mid', color=['#d65f5f', '#5fba7d'], vmax=1)\
-    .bar(subset = [col for col in df_pd.columns if col[1]==metric], align='mid', color=['#26abff', '#26abff'],vmax=1)\
-    .set_properties(**{'max-width': '6px', 'font-size': '10pt'})\
+    .bar(subset = [col for col in df_pd.columns if col[1]=="CAV\nAccuracy"], align='mid', color=['#26abff', '#26abff'],vmax=1)\
+    .set_properties(**{'max-width': '5000px', 'font-size': '10pt'})\
+    .set_properties(subset=[('','Concept')], **{'width': '3000px'})\
     .apply(lambda x:  [css_bar(start=0.1,end=y*100, color='#5fba7d', row_idx=i,
                                col=x.name, 
                                errs=df_pd[[col for col in df_pd.columns if col[1]=='Stdev']]) for i,y in enumerate(x)], subset=[col for col in df_pd.columns if col[1]=='TCAV'])
     pd.options.display.max_rows=100
-    pd.set_option("display.max_colwidth",100)
-    pd.set_option("display.latex.multicolumn_format","True")
-    pd.set_option("display.expand_frame_repr",False)
+#     pd.set_option("display.max_colwidth",100)
+#     pd.set_option('display.width', 10000)
+
+#     pd.set_option("display.latex.multicolumn_format","True")
+#     pd.set_option("display.expand_frame_repr",False)
     return styled
