@@ -13,7 +13,7 @@ python tcav_experiment.py --ckpt_path /data/moldwinar/torch_tcav/model_train_scr
 --experiment_name checkpoint-13224__500_finaldense \
 --working_dir /data/moldwinar/torch_tcav/tcav_scripts/checkpoint-13224__500_finaldense \
 --source_dir /data/moldwinar/tcav2/ \
---results_dir /results/checkpoint-13224__500_finaldense \
+--results_dir /data/moldwinar/torch_tcav/tcav_scripts/results/checkpoint-13224__500_finaldense \
 --target CCS \
 --activations_dir LSCRATCH \
 --all_activations_dir LSCRATCH/all_activations/ \

@@ -13,7 +13,7 @@ python tcav_experiment.py --ckpt_path /data/moldwinar/torch_tcav/model_train_scr
 --experiment_name FINALLogisticCCS_halfsplit_0_best_steps_13.pt_500_pre_sum \
 --working_dir /data/moldwinar/torch_tcav/tcav_scripts/FINALLogisticCCS_halfsplit_0_best_steps_13.pt_500_pre_sum \
 --source_dir /data/moldwinar/tcav2/ \
---results_dir /results/FINALLogisticCCS_halfsplit_0_best_steps_13.pt_500_pre_sum \
+--results_dir /data/moldwinar/torch_tcav/tcav_scripts/results/FINALLogisticCCS_halfsplit_0_best_steps_13.pt_500_pre_sum \
 --target CCS \
 --activations_dir LSCRATCH \
 --all_activations_dir LSCRATCH/all_activations/ \

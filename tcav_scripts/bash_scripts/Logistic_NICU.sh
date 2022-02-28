@@ -13,7 +13,7 @@ python tcav_experiment.py --ckpt_path /data/moldwinar/torch_tcav/model_train_scr
 --experiment_name logistic_best_steps_84.pt_500_pre_sum \
 --working_dir /data/moldwinar/torch_tcav/tcav_scripts/logistic_best_steps_84.pt_500_pre_sum \
 --source_dir /data/moldwinar/tcav2/ \
---results_dir /results/logistic_best_steps_84.pt_500_pre_sum \
+--results_dir /data/moldwinar/torch_tcav/tcav_scripts/results/logistic_best_steps_84.pt_500_pre_sum \
 --target nicu_los \
 --activations_dir LSCRATCH \
 --all_activations_dir LSCRATCH/all_activations/ \

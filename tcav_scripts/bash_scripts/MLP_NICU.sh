@@ -13,7 +13,7 @@ python tcav_experiment.py --ckpt_path /data/moldwinar/torch_tcav/model_train_scr
 --experiment_name NICU_MLP_0_checkpoint-28853_500_pool \
 --working_dir /data/moldwinar/torch_tcav/tcav_scripts/NICU_MLP_0_checkpoint-28853_500_pool \
 --source_dir /data/moldwinar/tcav2/ \
---results_dir /results/NICU_MLP_0_checkpoint-28853_500_pool \
+--results_dir /data/moldwinar/torch_tcav/tcav_scripts/results/NICU_MLP_0_checkpoint-28853_500_pool \
 --target nicu_los \
 --activations_dir LSCRATCH \
 --all_activations_dir LSCRATCH/all_activations/ \

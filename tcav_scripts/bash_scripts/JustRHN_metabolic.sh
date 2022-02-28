@@ -13,7 +13,7 @@ python tcav_experiment.py --ckpt_path /data/moldwinar/torch_tcav/model_train_scr
 --experiment_name CCS_just_residual_0_checkpoint-133893_500_finaldense \
 --working_dir /data/moldwinar/torch_tcav/tcav_scripts/CCS_just_residual_0_checkpoint-133893_500_finaldense \
 --source_dir /data/moldwinar/tcav2/ \
---results_dir /results/CCS_just_residual_0_checkpoint-133893_500_finaldense \
+--results_dir /data/moldwinar/torch_tcav/tcav_scripts/results/CCS_just_residual_0_checkpoint-133893_500_finaldense \
 --target CCS \
 --activations_dir LSCRATCH \
 --all_activations_dir LSCRATCH/all_activations/ \

@@ -13,7 +13,7 @@ python tcav_experiment.py --ckpt_path /data/moldwinar/torch_tcav/model_train_scr
 --experiment_name FINALWeightedBlueBert512NicuLosAdmissions_2_checkpoint-26015_500_pool \
 --working_dir /data/moldwinar/torch_tcav/tcav_scripts/FINALWeightedBlueBert512NicuLosAdmissions_2_checkpoint-26015_500_pool \
 --source_dir /data/moldwinar/tcav2/ \
---results_dir /results/FINALWeightedBlueBert512NicuLosAdmissions_2_checkpoint-26015_500_pool \
+--results_dir /data/moldwinar/torch_tcav/tcav_scripts/results/FINALWeightedBlueBert512NicuLosAdmissions_2_checkpoint-26015_500_pool \
 --target nicu_los \
 --activations_dir LSCRATCH \
 --all_activations_dir LSCRATCH/all_activations/ \

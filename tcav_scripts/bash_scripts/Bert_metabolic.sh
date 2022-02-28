@@ -13,7 +13,7 @@ python tcav_experiment.py --ckpt_path /data/moldwinar/torch_tcav/model_train_scr
 --experiment_name CCS_BERT_TEXT__0_checkpoint-4959_500_pool \
 --working_dir /data/moldwinar/torch_tcav/tcav_scripts/CCS_BERT_TEXT__0_checkpoint-4959_500_pool \
 --source_dir /data/moldwinar/tcav2/ \
---results_dir /results/CCS_BERT_TEXT__0_checkpoint-4959_500_pool \
+--results_dir /data/moldwinar/torch_tcav/tcav_scripts/results/CCS_BERT_TEXT__0_checkpoint-4959_500_pool \
 --target CCS \
 --activations_dir LSCRATCH \
 --all_activations_dir LSCRATCH/all_activations/ \

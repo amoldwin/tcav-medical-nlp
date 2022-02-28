@@ -13,7 +13,7 @@ python tcav_experiment.py --ckpt_path /data/moldwinar/torch_tcav/model_train_scr
 --experiment_name CNN_METABOLIC_best_steps_414.pt_500_dropout \
 --working_dir /data/moldwinar/torch_tcav/tcav_scripts/CNN_METABOLIC_best_steps_414.pt_500_dropout \
 --source_dir /data/moldwinar/tcav2/ \
---results_dir /results/CNN_METABOLIC_best_steps_414.pt_500_dropout \
+--results_dir /data/moldwinar/torch_tcav/tcav_scripts/results/CNN_METABOLIC_best_steps_414.pt_500_dropout \
 --target CCS \
 --activations_dir LSCRATCH \
 --all_activations_dir LSCRATCH/all_activations/ \

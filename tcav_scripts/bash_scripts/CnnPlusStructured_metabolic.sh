@@ -13,7 +13,7 @@ python tcav_experiment.py --ckpt_path /data/moldwinar/torch_tcav/model_train_scr
 --experiment_name CNN_RES_METABOLIC_best_steps_1242.pt_500_final_dense \
 --working_dir /data/moldwinar/torch_tcav/tcav_scripts/CNN_RES_METABOLIC_best_steps_1242.pt_500_final_dense \
 --source_dir /data/moldwinar/tcav2/ \
---results_dir /results/CNN_RES_METABOLIC_best_steps_1242.pt_500_final_dense \
+--results_dir /data/moldwinar/torch_tcav/tcav_scripts/results/CNN_RES_METABOLIC_best_steps_1242.pt_500_final_dense \
 --target CCS \
 --activations_dir LSCRATCH \
 --all_activations_dir LSCRATCH/all_activations/ \
