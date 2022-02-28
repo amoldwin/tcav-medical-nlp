@@ -89,18 +89,18 @@ act_generator = act_gen.ImageActivationGenerator(mymodel, source_dir, args.activ
 
 
 all_required_exs = pd.DataFrame()
-for fn in concepts+all_negative_concepts:
+for fn in concepts+all_negative_concepts +[args.target]:
    all_required_exs = pd.concat([all_required_exs,   pd.read_csv(os.path.join(concepts_dir,fn))], ignore_index=True).drop_duplicates(subset=['ROW_ID'])
 
-all_required_exs.to_csv(os.path.join(args.concepts_dir,'all_required_exs.csv'))
+all_required_exs.to_csv(os.path.join(args.concepts_dir,'all_required_exs_'+args.experiment_name+'.csv'))
 
-if not os.path.isfile(os.path.join(args.all_activations_dir,'all_activations.pk')):
+if not os.path.isfile(os.path.join(args.all_activations_dir,'all_activations_'+args.experiment_name+'.pk')):
 
-    all_activations = act_generator.get_activations_for_concept('all_required_exs.csv', bottleneck=bottlenecks[0],shuffled=False)
+    all_activations = act_generator.get_activations_for_concept('all_required_exs_'+args.experiment_name+'.csv', bottleneck=bottlenecks[0],shuffled=False)
 
     all_activations_df = pd.DataFrame((zip(all_required_exs['ROW_ID'], all_activations)),columns=['ROW_ID','activations'])
 
-    all_activations_df.to_pickle(os.path.join(args.all_activations_dir,'all_activations.pk'))
+    all_activations_df.to_pickle(os.path.join(args.all_activations_dir,'all_activations_'+args.experiment_name+'.pk'))
 
     
 #now create a new activation generator that will just load pre-saved activations for each concept 
