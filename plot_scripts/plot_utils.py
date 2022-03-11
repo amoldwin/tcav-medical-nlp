@@ -122,7 +122,7 @@ def css_bar(start: float, end: float, color: str, row_idx:int, col:str,errs) -> 
                 css += f"{color} {e:.1f}%, transparent {e:.1f}%);"
                 
                
-                css+= 'background-size: 80% 10%, 80% 80% ; background-repeat: no-repeat, no-repeat; background-position: 0 20%, 0 0 ;'
+                css+= 'background-size: 80% 10%, 80% 100% ; background-repeat: no-repeat, no-repeat; background-position: 0 20%, 0 0 ;'
                 
             return css
 def tcav_plot(model_names, targets,order, concept_names,metric='acc', ordered_labels=None):
