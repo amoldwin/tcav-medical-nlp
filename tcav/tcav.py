@@ -264,7 +264,7 @@ class TCAV(object):
         del acts
         return result
 
-    def _process_what_to_run_expand(self, num_random_exp=100, random_concepts=None):
+    def _process_what_to_run_expand(self, num_random_exp=500, random_concepts=None):
         """Get tuples of parameters to run TCAV with.
 
         TCAV builds random concept to conduct statistical significance testing
