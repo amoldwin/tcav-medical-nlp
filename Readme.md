@@ -21,7 +21,7 @@ Instructions:
  $ pip -r requirements.txt
  ```
 ## Usage
-(1) Run through the jupyter notebook ```specify_directories.ipynb```, making sure to change the paths to your desired locations for all of the subsequent data, model checkpoints, and results to be stored. 
+(1) Run through the jupyter notebook [```specify_directories.ipynb```](https://github.com/amoldwin/tcav-medical-nlp/blob/main/specify_directories.ipynb), making sure to change the paths to your desired locations for all of the subsequent data, model checkpoints, and results to be stored. 
 
 This way you can hopefully specify the paths just once. This is supposed to be instead of having hardcoded filepaths in the experiment scripts, but there may be a few paths left in the experiment scripts that I missed.
 
