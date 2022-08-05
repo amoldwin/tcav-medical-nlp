@@ -16,7 +16,7 @@ A number of scripts will need to be run to generate the data.
 
 
 
-For the metabolic syndrome task:
+## Metabolic Syndrome
 (1) As before, run the first 2 cells of [```create_training_data_metabolic_syndrome.ipynb```](https://github.com/amoldwin/tcav-medical-nlp/blob/main/data_preprocessing_scripts/create_training_data_metabolic_syndrome.ipynb)
 
 (2) Run [```pull_chart_labs_data_metabolic_syndrome.py```](https://github.com/amoldwin/tcav-medical-nlp/blob/main/data_preprocessing_scripts/pull_chart_labs_data_metabolic_syndrome.py) to output a file of the relevant lab and chart measurements
