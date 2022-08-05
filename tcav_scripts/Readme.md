@@ -3,7 +3,7 @@ This will go over how to run TCAV experiments by specifying command-line argumen
 
 ##Usage
 
-To simplify the process of running all the experiments, I made [```generate_bash_scripts.ipynb'''](https://github.com/amoldwin/tcav-medical-nlp/blob/main/tcav_scripts/generate_bash_scripts.ipynb) to automatically generate the arguments for "tcav_experiment.py". Modify as needed.
+To simplify the process of running all the experiments, I made [```generate_bash_scripts.ipynb```](https://github.com/amoldwin/tcav-medical-nlp/blob/main/tcav_scripts/generate_bash_scripts.ipynb) to automatically generate the arguments for "tcav_experiment.py". Modify as needed.
 
 
 Depending on several parameters, including where you would like to store your files,
