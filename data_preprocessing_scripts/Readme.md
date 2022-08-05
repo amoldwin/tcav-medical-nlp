@@ -1,32 +1,29 @@
-In this directory, you can find all of the scripts used to generate our task datasets for:
-
-(1)Neonatal Intensive Care Unit Length of Stay and (2)Metabolic Syndrome detection.
+# Dataset Creation
+In this directory, you can find all of the scripts used to generate our task datasets for (1) NICU Length-of-Stay prediction and (2) adult Metabolic Syndrome prediction. In addition to generating the task datasets, these scripts will create csv files with examples for each of the clinical concepts that we test with TCAV.
 
 Both tasks involve relying on the text of clinical notes to predict a binary outcome.
 
-In addition to generating the task datasets, these scripts will create csv files with examples for each of the clinical concepts that we test with TCAV.
+# Usage
 
 A number of scripts will need to be run to generate the data. 
-For the NICU task:
+## NICU LoS:
 
+(1) Run the first 2 cells of [```create_training_data_metabolic_syndrome.ipynb```](https://github.com/amoldwin/tcav-medical-nlp/blob/main/data_preprocessing_scripts/create_training_data_metabolic_syndrome.ipynb) (this is where we generated the merged admissions, so we need this for both tasks)
 
-(1) Run the first 2 cells of create_training_data_metabolic_syndrome.ipynb (this is where we generated the merged admissions, so we need this for both tasks)
+(1) run [```nicu_pull_birth_weight_gest_age.py```](https://github.com/amoldwin/tcav-medical-nlp/blob/main/data_preprocessing_scripts/nicu_pull_birth_weight_gest_age.py) 
 
-
-(1)nicu_pull_birth_weight_gest_age.py
-
-(2)create_los_neonates_none_removed.ipynb
+(2) run [```create_los_neonates_none_removed.ipynb```](https://github.com/amoldwin/tcav-medical-nlp/blob/main/data_preprocessing_scripts/create_los_neonates_none_removed.ipynb)
 
 
 
 For the metabolic syndrome task:
-(1) Run the first 2 cells of create_training_data_metabolic_syndrome.ipynb
+(1) As before, run the first 2 cells of [```create_training_data_metabolic_syndrome.ipynb```](https://github.com/amoldwin/tcav-medical-nlp/blob/main/data_preprocessing_scripts/create_training_data_metabolic_syndrome.ipynb)
 
-(2) Run pull_chart_labs_data_metabolic_syndrome.py to output a file of the relevant lab and chart measurements
+(2) Run [```pull_chart_labs_data_metabolic_syndrome.py```](https://github.com/amoldwin/tcav-medical-nlp/blob/main/data_preprocessing_scripts/pull_chart_labs_data_metabolic_syndrome.py) to output a file of the relevant lab and chart measurements
 
-(3) Run the rest of the cells in the jupyter notebook aggregate_metabolic_structured_data.ipynb 
+(3) Run the rest of the cells in the jupyter notebook [```aggregate_metabolic_structured_data.ipynb```](https://github.com/amoldwin/tcav-medical-nlp/blob/main/data_preprocessing_scripts/aggregate_metabolic_structured_data.ipynb) 
 
-(4) Run the rest of create_training_data_metabolic_syndrome.ipynb to generate training data and concept examples(pay attention to comments about optional steps)
+(4) Run the rest of [```create_training_data_metabolic_syndrome.ipynb```](https://github.com/amoldwin/tcav-medical-nlp/blob/main/data_preprocessing_scripts/create_training_data_metabolic_syndrome.ipynb) to generate training data and concept examples(pay attention to comments about optional steps)
 
 
 
