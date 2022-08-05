@@ -27,22 +27,22 @@ This way you can hopefully specify the paths just once. This is supposed to be i
 
 (2) Generate data for tasks and concepts
 
-Follow instructions in the readme in the ```data_preprocessing_scripts``` directory.
+Follow instructions in the readme in the [```data_preprocessing_scripts```](https://github.com/amoldwin/tcav-medical-nlp/tree/main/data_preprocessing_scripts) directory.
 
 
 (3) Train models
 
 
-Follow instructions in the readme in the [```model_train_scripts```](https://github.com/amoldwin/tcav-medical-nlp/tree/main/data_preprocessing_scripts) directory.
+Follow instructions in the readme in the [```model_train_scripts```](https://github.com/amoldwin/tcav-medical-nlp/tree/main/model_train_scripts) directory.
 
 
 (4) Run TCAV interpretability to interpret clinical NLP models in terms of concepts as they are expressed in clinical notes. Then Visualize results.
 
 
-Follow instructions in the readme in the ```tcav_scripts``` directory.
+Follow instructions in the readme in the [```tcav_scripts```](https://github.com/amoldwin/tcav-medical-nlp/tree/main/tcav_scripts) directory.
 
 
 (5) Run word-level interpretability (integrated gradients and average per-word attention) to compare the two paradigms.
 
 
-Follow instructions in the readme in the ```word_level_explanations``` directory.
+Follow instructions in the readme in the [```word_level_explanations```](https://github.com/amoldwin/tcav-medical-nlp/tree/main/word_level_explanations) directory.
