@@ -21,7 +21,7 @@ Each model has its own training script.
 
 (7) Train Bert  + RMLP Siamese model on MetS:
 
-##Training CNN Models
+## Training CNN Models
 
 (1) Train Text CNN on NICU LoS
 
