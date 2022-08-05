@@ -26,10 +26,10 @@ Instructions:
 This way you can hopefully specify the paths just once. This is supposed to be instead of having hardcoded filepaths in the experiment scripts, but there may be a few paths left in the experiment scripts that I missed.
 
 
-(2) Generate data for tasks and concepts
+###Generate data for tasks and concepts
 
 
-Follow instructions in the readme in the "data_preprocessing_scripts" directory.
+(2) Follow instructions in the readme in the "data_preprocessing_scripts" directory.
 
 
 (3) Train models
