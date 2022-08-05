@@ -1,5 +1,5 @@
 # Dataset Creation
-In this directory, you can find all of the scripts used to generate our task datasets for (1) NICU Length-of-Stay prediction and (2) adult Metabolic Syndrome prediction. In addition to generating the task datasets, these scripts will create csv files with examples for each of the clinical concepts that we test with TCAV.
+In this directory, you can find all of the scripts used to generate our task datasets for (1) NICU Length-of-Stay prediction and (2) adult Metabolic Syndrome classification. In addition to generating the task datasets, these scripts will create csv files with examples for each of the clinical concepts that we test with TCAV.
 
 Both tasks involve relying on the text of clinical notes to predict a binary outcome.
 
