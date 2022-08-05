@@ -12,7 +12,7 @@ Our work using TCAV to interpret NLP-based clinical prediction models has been s
 
 
 Instructions:
-
+## Installation
 (0) Clone the repository and install the required python libraries using the following 2 commands:
 ```bash
  $ git clone https://github.com/amoldwin/tcav-medical-nlp.git
@@ -20,7 +20,7 @@ Instructions:
  ```bash
  $ pip -r requirements.txt
  ```
-
+## Usage
 (1) Run through the jupyter notebook ```specify_directories.ipynb```, making sure to change the paths to your desired locations for all of the subsequent data, model checkpoints, and results to be stored. 
 
 This way you can hopefully specify the paths just once. This is supposed to be instead of having hardcoded filepaths in the experiment scripts, but there may be a few paths left in the experiment scripts that I missed.
