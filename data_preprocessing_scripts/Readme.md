@@ -26,5 +26,5 @@ A number of scripts will need to be run to generate the data.
 (4) Run the rest of [```create_training_data_metabolic_syndrome.ipynb```](https://github.com/amoldwin/tcav-medical-nlp/blob/main/data_preprocessing_scripts/create_training_data_metabolic_syndrome.ipynb) to generate training data and concept examples(pay attention to comments about optional steps)
 
 
-
+## Other Optional Preprocessing
 In addition, we had some other minor preprocessing steps that included (1) generating a file listing all the section headers present in each clinical note in MIMIC and (2) Training an NER model (found in the "model train_scripts" folder) to supplement the examples for the "smoker status" concept. These steps ended up being time consuming and mostly inconsequential in affecting the final dataset cohorts, so for simplicity we will omit them in our instructions for reproducing the dataset.
