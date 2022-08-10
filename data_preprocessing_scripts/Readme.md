@@ -8,7 +8,7 @@ Both tasks involve relying on the text of clinical notes to predict a binary out
 A number of scripts will need to be run to generate the data. 
 ## NICU LoS:
 
-(1) Run the first 2 cells of [```create_training_data_metabolic_syndrome.ipynb```](https://github.com/amoldwin/tcav-medical-nlp/blob/main/data_preprocessing_scripts/create_training_data_metabolic_syndrome.ipynb) (this is where we generated the merged admissions, so we need this for both tasks)
+(1) Run the first 2 cells of [```create_training_data_metabolic_syndrome.ipynb```](https://github.com/amoldwin/tcav-medical-nlp/blob/main/data_preprocessing_scripts/create_training_data_metabolic_syndrome.ipynb) (this is where we generated the merged admissions, so we need this for both tasks) until after ```merged_HADMs.csv``` has been saved.
 
 (1) run [```nicu_pull_birth_weight_gest_age.py```](https://github.com/amoldwin/tcav-medical-nlp/blob/main/data_preprocessing_scripts/nicu_pull_birth_weight_gest_age.py) 
 
